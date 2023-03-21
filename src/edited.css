@@ -1,0 +1,22 @@
+.row>* {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+
+}
+.col-2 {
+    width: 14%;
+}
+.col-1 {
+    width: 7%;
+}
+.col-4 {
+    width: 28%;
+}
+.fs-4
+{
+    display: inline-block;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}

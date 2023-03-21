@@ -1,3 +1,5 @@
+ 
+
 .App {
   text-align: center;
 }
@@ -35,4 +37,84 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@keyframes borderEffect {
+  0% {
+    border: 0px
+  }
+  50% {
+    border: 10px solid gold
+  }
+  100% {
+    border: 0px
+  }
+}
+
+.wrapper {
+  max-width: 100%;
+  overflow: hidden;
+}
+.marquee {
+white-space: nowrap;
+overflow: hidden;
+display: inline-block;
+animation: marquee 10s linear infinite;
+}
+.marquee p {
+display: inline-block;
+}
+@keyframes marquee {
+0% {
+transform: translate3d(0, 0, 0);
+}
+100% {
+transform: translate3d(-50%, 0, 0);
+}
+
+}
+@keyframes display {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes display {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.gold {
+  text-transform: uppercase;
+  line-height:1;
+  background: linear-gradient(90deg, rgba(186,148,62,1) 0%, rgba(236,172,32,1) 20%, rgba(186,148,62,1) 39%, rgba(249,244,180,1) 50%, rgba(186,148,62,1) 60%, rgba(236,172,32,1) 80%, rgba(186,148,62,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;	
+  animation: shine 4s infinite;
+  background-size: 200%;
+  background-position: left;
+
+}
+@keyframes shine {
+  0%{background-position: left}
+  50%{background-position: right}
+  100%{background-position: left}
 }

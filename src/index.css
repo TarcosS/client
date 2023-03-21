@@ -11,3 +11,80 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.partiCard{
+  border: 1px solid rgb(255, 255, 255); border-radius: 8px; box-shadow: 5px 10px 18px rgb(209, 209, 209) ;
+}
+.miniCards{
+  height: 180px; border: 1px solid rgb(255, 255, 255); border-radius: 8px; box-shadow: 5px 10px 18px rgb(209, 209, 209) ; padding: 16px;
+}
+.firstlabel{
+  border: 1px solid white; height: 30px; width: 740px; background-color: white;font-size: 26px
+}
+.secondlabel{
+  border: 1px solid rgb(2, 168, 2); height: 40px; width: 740px; background-color: rgb(2, 168, 2);font-size: 26px
+}
+.thirdlabel{
+  border: 1px solid rgb(193, 1, 27); height: 40px; width: 740px; background-color: rgb(193, 1, 27); color: white;font-size: 26px
+}
+.chppicture{
+  height: 250px; width: 180px; border: 1px solid black; border-radius: 8px; border-radius: 8px; background-repeat: no-repeat; background-size:cover;
+}
+.akppicture{
+  height: 250px; width: 180px; border: 1px solid black; border-radius: 8px; border-radius: 8px; background-repeat: no-repeat; background-size:cover;
+}
+.mhppicture{
+  height: 250px; width: 180px; border: 1px solid black; border-radius: 8px; border-radius: 8px; background-repeat: no-repeat; background-size:cover; 
+}
+.hdppicture{
+  height: 250px; width: 180px; border: 1px solid black; border-radius: 8px; border-radius: 8px; background-repeat: no-repeat; background-size:cover; 
+}
+.redblock{
+  height: 60px; width: 180px; border: 1px solid rgb(193, 1, 27); border-radius: 8px; border-radius: 8px; background-color: rgb(193, 1, 27);
+}
+.greenblock{
+  height: 60px; width: 180px; border: 1px solid rgb(2, 168, 2); border-radius: 8px; border-radius: 8px; background-color: rgb(2, 168, 2)
+}
+.hoparlor{
+  border: 1px solid black; height: 110px; width: 90px ; border-radius: 8px;background-repeat: no-repeat; background-size:cover; 
+}
+.celenk{
+  border: 1px solid black; height: 110px; width: 90px ; border-radius: 8px; background-repeat: no-repeat; background-size:cover; 
+}
+.tiktok{
+  border: 1px solid black; height: 110px; width: 90px ; border-radius: 8px; background-repeat: no-repeat; background-size:cover; 
+}
+.surat{
+  border: 1px solid black; height: 110px; width: 90px ; border-radius: 8px; background-repeat: no-repeat; background-size:cover; 
+}
+.agırlık{
+  border: 1px solid black; height: 110px; width: 90px ; border-radius: 8px; background-repeat: no-repeat; background-size:cover; 
+}
+.sampiyon{
+  border: 1px solid black; height: 110px; width: 90px ; border-radius: 8px; background-repeat: no-repeat; background-size:cover; 
+}
+.gg{
+  border: 1px solid black; height: 110px; width: 90px ; border-radius: 8px; background-repeat: no-repeat; background-size:cover; 
+}
+.balina{
+  border: 1px solid black; height: 110px; width: 90px ; border-radius: 8px; background-repeat: no-repeat; background-size:cover; 
+}
+.like{
+  border: 1px solid rgb(204, 204, 204); background-color: gold; height: 50px; width: 103%;font-size: 26px
+}
+.kings{
+  border: 1px solid rgb(204, 204, 204); height: 50px; width: 103%; background-color: rgb(0, 0, 0); color: white; font-size: 26px;
+}
+.box{
+  height: 120px; width: 100%;
+}
+.photo{
+  border: 1px solid rgb(204, 204, 204); border-radius: 10%; height: 120px; width: 120px; background-repeat: no-repeat !important; background-size:cover !important; 
+}
+.name{
+  height: 50px; width: 200px; 
+}
+
+.filter {
+  transition: 200ms;
+}
