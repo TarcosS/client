@@ -8,12 +8,11 @@ import username from './username.json'
 class TikTokIOConnection {
     constructor(backendUrl, newUser) {
         this.socket = io(backendUrl);
-        this.uniqueId = io(newUser);
+        this.uniqueId = username.username
         this.options = null;
         
         this.socket.on('connect', () => {
             console.info("Socket connected!");
-
             // Reconnect to streamer if uniqueId already set
             this.setUniqueId();
         })

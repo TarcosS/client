@@ -8,8 +8,6 @@ class ButtonComponent extends React.Component{
         audio = document.getElementById(this.props.url + "_audio")
         if(!this.props.isMusicPlay){
             var videos = document.querySelectorAll('video');
-            console.log('hi')
-
             for(let i = 0; i < videos.length; i ++){
                 videos[i].pause()
             }
@@ -31,9 +29,7 @@ class ButtonComponent extends React.Component{
     }
     
     render(){
-        console.log(this.props.isMusicPlay)
         function konfeti(target) {
-        
             var canvas = document.getElementById(target + "_image");
         
             // you should  only initialize a canvas once, so save this function
@@ -50,7 +46,7 @@ class ButtonComponent extends React.Component{
             
             <div>
                 <canvas className="mb-1 chppicture" id={this.props.url + "_image"}
-                    style={{backgroundImage: this.props.url ? `url('/assets/images/${ this.props.url.toLowerCase() + '.png'}')` : null, backgroundSize:"cover"}}>
+                    style={{backgroundImage: this.props.url ? `url('/assets/images/${ this.props.url.toLowerCase() + '.png'}')` : null, backgroundSize:"cover", backgroundPosition: 'center'}}>
                 </canvas>
                 <video className="d-none" id={this.props.url + "_audio"} src={this.props.url ? `/assets/sounds/${ this.props.url.toLowerCase() + '.mp4'}` : ''}></video>
                 <button id={this.props.parti} className={this.props.isMax ? this.props.url +  " d-flex justify-content-center greenblock" : this.props.url + " d-flex justify-content-center redblock"} onClick={()=>{konfeti(this.props.url)}}>

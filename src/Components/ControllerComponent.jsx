@@ -4,9 +4,6 @@ import PartiCardComponent from "./subController/PartiCardComponent";
 import { TikTokIOConnection } from '../connection'
 import axios from "axios";
 
-
-let connection = undefined;
-
 // const [total, setTotal] = useState(0)
 // useEffect(()=>{
 //     setTotal(totalViewer.totalViewer)
@@ -32,16 +29,13 @@ class ControllerComponent extends React.Component {
         }, 1000)
     }
     componentDidUpdate(){
-        if(connection !== undefined) {
-            connection.on('roomUser', (res)=>{
+        if(this.props.connection !== undefined) {
+            this.props.connection.on('roomUser', (res)=>{
                 this.setState({
                     total: res.viewerCount
                 })
             })
         }
-    }
-    startConnection(e){
-        connection = new TikTokIOConnection('http://localhost:2800', document.getElementById('tiktokerName').value);
     }
     stopAllMusic(e){
         let uri = '';
@@ -55,6 +49,7 @@ class ControllerComponent extends React.Component {
         axios.post(uri)
     }
     render(){
+        console.log('Deneme')
         var cardInfo = [
             {
                 header: "1. Aday",
@@ -114,14 +109,14 @@ class ControllerComponent extends React.Component {
                                     type="submit" className="btn btn-primary" style={{width:"100%", marginTop:"10px"}}>Puanları Sıfırla</button>
                             </div>
                         </div>
-                        <div className="col-md-12 col-lg-3 mb-3">
+                        {/* <div className="col-md-12 col-lg-3 mb-3">
                             <div className="miniCards">
                                 <div className="h1 fs-5 fw-bold">Otomasyon</div>
                                 <div className="h2 fs-6 ">Etkileşim Otomasyon Sistemi</div>
                                 <input type="text" className="form-control" id="tiktokerName" aria-describedby="emailHelp" placeholder="Kullanıcı Adı Giriniz" style={{marginTop:"10px"}} />
                                     <button type="submit" className="btn btn-primary" style={{width:"100%", marginTop:"10px"}} onClick={(e)=>{this.startConnection(e)}} >Başlat</button>
                             </div>
-                        </div>
+                        </div> */}
                         <div className="col-md-12 col-lg-3 mb-3">
                            <div className="d-flex justify-content-between flex-column miniCards">
                                 <div>

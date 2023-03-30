@@ -21,8 +21,7 @@ import mhp4 from "../img/mhp4.png"
 import axios from 'axios';
 import Canvas from "./CanvasComponent";
 import LastLikers from "./subController/lastLikers";
-import { TikTokIOConnection } from '../connection'
-const connection = new TikTokIOConnection('http://localhost:2800');
+
 
 // const [liker, setLiker] = useState(["",""]);
 // const [follower, setFollower] = useState(["",""])
@@ -98,7 +97,7 @@ class MainPage extends React.Component {
         let counts = {}
         var profilePictureUrl1 = ""
         var profilePictureUrl2 = ""
-        connection.on('chat', (res)=> {
+        this.props.connection.on('chat', (res)=> {
             let likes= {
                 likerName: res.uniqueId,
                 profilePictureUrl: res.profilePictureUrl
@@ -115,7 +114,7 @@ class MainPage extends React.Component {
             })
         })
 
-        connection.on('gift',(res)=>{
+        this.props.connection.on('gift',(res)=>{
             if (res.giftType === 1 && !res.repeatEnd) {
                 // Streak in progress => show only temporary
                 // let veri= {
@@ -151,7 +150,7 @@ class MainPage extends React.Component {
             }
         })
 
-        connection.on('follow', (res)=>{
+        this.props.connection.on('follow', (res)=>{
             document.getElementById("alert").click()
             this.setState({
                 follower: [res.uniqueId, res.profilePictureUrl]
@@ -196,7 +195,7 @@ class MainPage extends React.Component {
                     </div>
                 </div>
                 <div className="row my-1 justify-content-center ">
-                    <Canvas persons={this.state.persons} connection={connection} isMusicPlay={this.state.isMusicPlay}/> 
+                    <Canvas persons={this.state.persons} connection={this.props.connection} isMusicPlay={this.state.isMusicPlay}/> 
                 </div> 
                 <div className="row my-2 d-flex justify-content-center ">
                     <div className="col-1 d-flex flex-column align-items-center"  >

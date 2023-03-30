@@ -62,7 +62,6 @@ class Canvas extends React.Component {
                 }
                 this.props.connection.on('chat', (res)=>{
                     let commentFirstWord = res.comment.split(' ')[0].toUpperCase();
-                    console.log(commentFirstWord)
                     if( 
                         commentFirstWord === this.props.persons[0]
                     ) {
